@@ -1,0 +1,547 @@
+[0m11:04:20.229529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A85854D010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A8598A7ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A8598A7B10>]}
+
+
+============================== 11:04:20.233023 | 69bba81d-91ad-4841-abb2-c1735805d7ce ==============================
+[0m11:04:20.233023 [info ] [MainThread]: Running with dbt=1.11.2
+[0m11:04:20.233578 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\.dbt', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m11:04:20.249957 [info ] [MainThread]: dbt version: 1.11.2
+[0m11:04:20.250336 [info ] [MainThread]: python version: 3.13.9
+[0m11:04:20.250650 [info ] [MainThread]: python path: C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\venv\Scripts\python.exe
+[0m11:04:20.250921 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m11:04:20.290275 [info ] [MainThread]: Using profiles dir at C:\Users\Kifiya_Administrator\.dbt
+[0m11:04:20.290857 [info ] [MainThread]: Using profiles.yml file at C:\Users\Kifiya_Administrator\.dbt\profiles.yml
+[0m11:04:20.291276 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+[0m11:04:20.292099 [info ] [MainThread]: adapter type: postgres
+[0m11:04:20.292472 [info ] [MainThread]: adapter version: 1.10.0
+[0m11:04:20.292847 [info ] [MainThread]: Configuration:
+[0m11:04:20.293120 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:04:20.293384 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m11:04:20.293712 [info ] [MainThread]: Required dependencies:
+[0m11:04:20.294060 [debug] [MainThread]: Executing "git --help"
+[0m11:04:20.319871 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:04:20.320239 [debug] [MainThread]: STDERR: "b''"
+[0m11:04:20.320518 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:04:20.320902 [info ] [MainThread]: Connection:
+[0m11:04:20.321226 [info ] [MainThread]:   host: localhost
+[0m11:04:20.321546 [info ] [MainThread]:   port: 5432
+[0m11:04:20.321836 [info ] [MainThread]:   user: postgres
+[0m11:04:20.322060 [info ] [MainThread]:   database: medical_dw
+[0m11:04:20.322263 [info ] [MainThread]:   schema: analytics
+[0m11:04:20.322467 [info ] [MainThread]:   connect_timeout: 10
+[0m11:04:20.322662 [info ] [MainThread]:   role: None
+[0m11:04:20.322846 [info ] [MainThread]:   search_path: None
+[0m11:04:20.323027 [info ] [MainThread]:   keepalives_idle: 0
+[0m11:04:20.323210 [info ] [MainThread]:   sslmode: None
+[0m11:04:20.323393 [info ] [MainThread]:   sslcert: None
+[0m11:04:20.323625 [info ] [MainThread]:   sslkey: None
+[0m11:04:20.323850 [info ] [MainThread]:   sslrootcert: None
+[0m11:04:20.324064 [info ] [MainThread]:   application_name: dbt
+[0m11:04:20.324252 [info ] [MainThread]:   retries: 1
+[0m11:04:20.324555 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m11:04:20.440802 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m11:04:22.232193 [debug] [MainThread]: Using postgres connection "debug"
+[0m11:04:22.232470 [debug] [MainThread]: On debug: select 1 as id
+[0m11:04:22.232655 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:04:22.260301 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+[0m11:04:22.291832 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m11:04:22.292169 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m11:04:22.292417 [debug] [MainThread]: On debug: No close available on handle
+[0m11:04:22.292643 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m11:04:22.293064 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m11:04:22.293385 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\dbt_project.yml> not found
+
+[0m11:04:22.293684 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m11:04:22.294230 [debug] [MainThread]: Command `dbt debug` failed at 11:04:22.294145 after 2.15 seconds
+[0m11:04:22.294436 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:04:22.294639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A8599ABBB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A85AEEC3B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A85993F240>]}
+[0m11:04:22.294910 [debug] [MainThread]: Flushing usage events
+[0m11:04:24.503868 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:22:14.062075 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F08E12D010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F08F487ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F08F487B10>]}
+
+
+============================== 11:22:14.066102 | 63df61d6-5a1e-4b5b-aba6-9344d9e21396 ==============================
+[0m11:22:14.066102 [info ] [MainThread]: Running with dbt=1.11.2
+[0m11:22:14.066824 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\.dbt', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m11:22:14.078705 [info ] [MainThread]: dbt version: 1.11.2
+[0m11:22:14.079095 [info ] [MainThread]: python version: 3.13.9
+[0m11:22:14.079530 [info ] [MainThread]: python path: C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\venv\Scripts\python.exe
+[0m11:22:14.079842 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m11:22:14.122104 [info ] [MainThread]: Using profiles dir at C:\Users\Kifiya_Administrator\.dbt
+[0m11:22:14.122640 [info ] [MainThread]: Using profiles.yml file at C:\Users\Kifiya_Administrator\.dbt\profiles.yml
+[0m11:22:14.122997 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+[0m11:22:14.124023 [info ] [MainThread]: adapter type: postgres
+[0m11:22:14.124303 [info ] [MainThread]: adapter version: 1.10.0
+[0m11:22:14.124671 [info ] [MainThread]: Configuration:
+[0m11:22:14.124943 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:22:14.125297 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m11:22:14.125566 [info ] [MainThread]: Required dependencies:
+[0m11:22:14.125832 [debug] [MainThread]: Executing "git --help"
+[0m11:22:14.148844 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:22:14.149225 [debug] [MainThread]: STDERR: "b''"
+[0m11:22:14.149507 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:22:14.149889 [info ] [MainThread]: Connection:
+[0m11:22:14.150692 [info ] [MainThread]:   host: localhost
+[0m11:22:14.151043 [info ] [MainThread]:   port: 5432
+[0m11:22:14.151328 [info ] [MainThread]:   user: postgres
+[0m11:22:14.151590 [info ] [MainThread]:   database: medical_dw
+[0m11:22:14.151844 [info ] [MainThread]:   schema: analytics
+[0m11:22:14.152149 [info ] [MainThread]:   connect_timeout: 10
+[0m11:22:14.152663 [info ] [MainThread]:   role: None
+[0m11:22:14.153066 [info ] [MainThread]:   search_path: None
+[0m11:22:14.153382 [info ] [MainThread]:   keepalives_idle: 0
+[0m11:22:14.153645 [info ] [MainThread]:   sslmode: None
+[0m11:22:14.153878 [info ] [MainThread]:   sslcert: None
+[0m11:22:14.154125 [info ] [MainThread]:   sslkey: None
+[0m11:22:14.154906 [info ] [MainThread]:   sslrootcert: None
+[0m11:22:14.155221 [info ] [MainThread]:   application_name: dbt
+[0m11:22:14.155419 [info ] [MainThread]:   retries: 1
+[0m11:22:14.155761 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m11:22:14.273235 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m11:22:14.300956 [debug] [MainThread]: Using postgres connection "debug"
+[0m11:22:14.301240 [debug] [MainThread]: On debug: select 1 as id
+[0m11:22:14.301421 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:22:14.328998 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+[0m11:22:14.351803 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m11:22:14.352155 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m11:22:14.352383 [debug] [MainThread]: On debug: No close available on handle
+[0m11:22:14.352573 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m11:22:14.353005 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m11:22:14.353377 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\dbt_project.yml> not found
+
+[0m11:22:14.353742 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m11:22:14.354402 [debug] [MainThread]: Command `dbt debug` failed at 11:22:14.354313 after 0.38 seconds
+[0m11:22:14.354619 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:22:14.354827 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F08F58BBB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F090A1C3B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F08F51F240>]}
+[0m11:22:14.355067 [debug] [MainThread]: Flushing usage events
+[0m11:22:18.040092 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:43:34.337637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D689CD010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D69D1BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D69D1BB10>]}
+
+
+============================== 11:43:34.340670 | 11b9cc99-1a11-4905-9e4b-9d147492b20c ==============================
+[0m11:43:34.340670 [info ] [MainThread]: Running with dbt=1.11.2
+[0m11:43:34.341193 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m11:43:34.341515 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:43:34.342108 [debug] [MainThread]: Command `dbt run` failed at 11:43:34.342021 after 0.08 seconds
+[0m11:43:34.342334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D69D2A520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D69D5D7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D69B77680>]}
+[0m11:43:34.342555 [debug] [MainThread]: Flushing usage events
+[0m11:43:36.427351 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:43:37.920241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAF2C4D010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAF3F9BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAF3F9BB10>]}
+
+
+============================== 11:43:37.923487 | d5ef6d6d-f6ad-4cbf-8348-a7931ce93e09 ==============================
+[0m11:43:37.923487 [info ] [MainThread]: Running with dbt=1.11.2
+[0m11:43:37.924048 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m11:43:37.924641 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:43:37.925376 [debug] [MainThread]: Command `dbt test` failed at 11:43:37.925272 after 0.08 seconds
+[0m11:43:37.925623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAF3FAA520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAF3FDD7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAF3DF7680>]}
+[0m11:43:37.925857 [debug] [MainThread]: Flushing usage events
+[0m11:43:38.784790 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:43:40.265491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE7E0CD010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE7F42FED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE7F42FB10>]}
+
+
+============================== 11:43:40.269003 | 2c29594f-d61c-4f18-81e9-8ad91b4396ca ==============================
+[0m11:43:40.269003 [info ] [MainThread]: Running with dbt=1.11.2
+[0m11:43:40.269509 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt docs generate', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m11:43:40.269837 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:43:40.270461 [debug] [MainThread]: Command `dbt docs generate` failed at 11:43:40.270370 after 0.08 seconds
+[0m11:43:40.270692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE7F432650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE7F46D7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE7F287680>]}
+[0m11:43:40.270918 [debug] [MainThread]: Flushing usage events
+[0m11:43:41.874972 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:43:43.386853 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199A91D010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199BC6BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199BC6BB10>]}
+
+
+============================== 11:43:43.389916 | 5a7d8dec-e448-4cae-b1ab-48ba78d55d2c ==============================
+[0m11:43:43.389916 [info ] [MainThread]: Running with dbt=1.11.2
+[0m11:43:43.390456 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt docs serve', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m11:43:43.390792 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:43:43.391406 [debug] [MainThread]: Command `dbt docs serve` failed at 11:43:43.391324 after 0.08 seconds
+[0m11:43:43.391627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199BC6E650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199BCAD7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199BAC7680>]}
+[0m11:43:43.391845 [debug] [MainThread]: Flushing usage events
+[0m11:43:44.278913 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:59:09.250679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E05BD010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E190BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E190BB10>]}
+
+
+============================== 11:59:09.253841 | 3cd850ae-3327-493f-95fd-57704094f2e4 ==============================
+[0m11:59:09.253841 [info ] [MainThread]: Running with dbt=1.11.2
+[0m11:59:09.254371 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run --select stg_telegram_messages', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m11:59:09.306436 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m11:59:09.307003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '3cd850ae-3327-493f-95fd-57704094f2e4', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E1A2CFC0>]}
+[0m11:59:09.307380 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m11:59:09.307787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '3cd850ae-3327-493f-95fd-57704094f2e4', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E19B1370>]}
+[0m11:59:09.407980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3cd850ae-3327-493f-95fd-57704094f2e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E17AEF50>]}
+[0m11:59:09.452701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3cd850ae-3327-493f-95fd-57704094f2e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E04E25D0>]}
+[0m11:59:09.453758 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m11:59:09.583473 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m11:59:09.584249 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:59:09.584639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3cd850ae-3327-493f-95fd-57704094f2e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E2CF1A90>]}
+[0m11:59:10.978847 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Failed to render models\staging\schema.yml from project medical_warehouse: Parsing Error
+    Env var required but not provided: 'DB_NAME'
+[0m11:59:10.979515 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m11:59:10.980191 [debug] [MainThread]: Command `dbt run` failed at 11:59:10.980104 after 1.84 seconds
+[0m11:59:10.980423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E2EF3C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E16DFB90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E2F4A090>]}
+[0m11:59:10.980646 [debug] [MainThread]: Flushing usage events
+[0m11:59:13.305118 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:00:45.934982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18A4ED010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18B84BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18B84BB10>]}
+
+
+============================== 12:00:45.938320 | d7ef53c3-2e05-4549-9f1d-79d85708384b ==============================
+[0m12:00:45.938320 [info ] [MainThread]: Running with dbt=1.11.2
+[0m12:00:45.938872 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select stg_telegram_messages', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m12:00:45.980120 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m12:00:45.980850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd7ef53c3-2e05-4549-9f1d-79d85708384b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18B96CFC0>]}
+[0m12:00:45.981170 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m12:00:45.981534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd7ef53c3-2e05-4549-9f1d-79d85708384b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18B8F5370>]}
+[0m12:00:46.065160 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd7ef53c3-2e05-4549-9f1d-79d85708384b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18B6EEF50>]}
+[0m12:00:46.108052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd7ef53c3-2e05-4549-9f1d-79d85708384b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18A4125D0>]}
+[0m12:00:46.109489 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m12:00:46.229963 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m12:00:46.230643 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m12:00:46.231134 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd7ef53c3-2e05-4549-9f1d-79d85708384b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18CBE1A90>]}
+[0m12:00:46.944390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd7ef53c3-2e05-4549-9f1d-79d85708384b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18CDA0050>]}
+[0m12:00:46.983521 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\target\manifest.json
+[0m12:00:46.990293 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\target\semantic_manifest.json
+[0m12:00:47.009315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd7ef53c3-2e05-4549-9f1d-79d85708384b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18CF64650>]}
+[0m12:00:47.009667 [info ] [MainThread]: Found 1 model, 1 source, 464 macros
+[0m12:00:47.010034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd7ef53c3-2e05-4549-9f1d-79d85708384b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18D08E200>]}
+[0m12:00:47.011070 [info ] [MainThread]: 
+[0m12:00:47.011461 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:00:47.011727 [info ] [MainThread]: 
+[0m12:00:47.012101 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:00:47.012798 [debug] [ThreadPool]: Acquiring new postgres connection 'list_medical_dw'
+[0m12:00:47.051572 [debug] [ThreadPool]: Using postgres connection "list_medical_dw"
+[0m12:00:47.051898 [debug] [ThreadPool]: On list_medical_dw: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "list_medical_dw"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:00:47.052114 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:00:47.083168 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.031 seconds
+[0m12:00:47.084114 [debug] [ThreadPool]: On list_medical_dw: Close
+[0m12:00:47.084900 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_medical_dw, now create_medical_dw_analytics)
+[0m12:00:47.085273 [debug] [ThreadPool]: Creating schema "database: "medical_dw"
+schema: "analytics"
+"
+[0m12:00:47.088780 [debug] [ThreadPool]: Using postgres connection "create_medical_dw_analytics"
+[0m12:00:47.089008 [debug] [ThreadPool]: On create_medical_dw_analytics: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "create_medical_dw_analytics"} */
+create schema if not exists "analytics"
+[0m12:00:47.089196 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:00:47.113684 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.024 seconds
+[0m12:00:47.114451 [debug] [ThreadPool]: On create_medical_dw_analytics: COMMIT
+[0m12:00:47.114699 [debug] [ThreadPool]: Using postgres connection "create_medical_dw_analytics"
+[0m12:00:47.114879 [debug] [ThreadPool]: On create_medical_dw_analytics: COMMIT
+[0m12:00:47.116250 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m12:00:47.116513 [debug] [ThreadPool]: On create_medical_dw_analytics: Close
+[0m12:00:47.117885 [debug] [ThreadPool]: Acquiring new postgres connection 'list_medical_dw_analytics'
+[0m12:00:47.121760 [debug] [ThreadPool]: Using postgres connection "list_medical_dw_analytics"
+[0m12:00:47.122050 [debug] [ThreadPool]: On list_medical_dw_analytics: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "list_medical_dw_analytics"} */
+select
+      'medical_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'medical_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'medical_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m12:00:47.122264 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:00:47.149536 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.027 seconds
+[0m12:00:47.150446 [debug] [ThreadPool]: On list_medical_dw_analytics: ROLLBACK
+[0m12:00:47.150834 [debug] [ThreadPool]: On list_medical_dw_analytics: Close
+[0m12:00:47.154315 [debug] [MainThread]: Using postgres connection "master"
+[0m12:00:47.154709 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m12:00:47.155027 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:00:47.184167 [debug] [MainThread]: SQL status: SELECT 0 in 0.029 seconds
+[0m12:00:47.185555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd7ef53c3-2e05-4549-9f1d-79d85708384b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18D3F6CB0>]}
+[0m12:00:47.186076 [debug] [MainThread]: On master: ROLLBACK
+[0m12:00:47.186662 [debug] [MainThread]: On master: COMMIT
+[0m12:00:47.186936 [debug] [MainThread]: Using postgres connection "master"
+[0m12:00:47.187208 [debug] [MainThread]: On master: COMMIT
+[0m12:00:47.187710 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m12:00:47.187937 [debug] [MainThread]: On master: Close
+[0m12:00:47.192581 [debug] [Thread-1 (]: Began running node model.medical_warehouse.stg_telegram_messages
+[0m12:00:47.192989 [info ] [Thread-1 (]: 1 of 1 START sql view model analytics.stg_telegram_messages .................... [RUN]
+[0m12:00:47.193528 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.medical_warehouse.stg_telegram_messages'
+[0m12:00:47.193775 [debug] [Thread-1 (]: Began compiling node model.medical_warehouse.stg_telegram_messages
+[0m12:00:47.198381 [debug] [Thread-1 (]: Writing injected SQL for node "model.medical_warehouse.stg_telegram_messages"
+[0m12:00:47.200156 [debug] [Thread-1 (]: Began executing node model.medical_warehouse.stg_telegram_messages
+[0m12:00:47.225241 [debug] [Thread-1 (]: Writing runtime sql for node "model.medical_warehouse.stg_telegram_messages"
+[0m12:00:47.227386 [debug] [Thread-1 (]: Using postgres connection "model.medical_warehouse.stg_telegram_messages"
+[0m12:00:47.227719 [debug] [Thread-1 (]: On model.medical_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.stg_telegram_messages"} */
+
+  create view "medical_dw"."analytics"."stg_telegram_messages__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/stg_telegram_messages.sql
+-- This staging model cleans and standardizes raw Telegram messages for downstream analytics
+
+with raw as (
+    select *
+    from "medical_dw"."analytics"."telegram_messages"  -- Reference your raw table
+),
+
+cleaned as (
+    select
+        message_id,                                  -- Unique identifier for each message
+        channel_name,                                -- Telegram channel name
+        message_date::timestamp as message_date,    -- Convert to timestamp
+        message_text,                                -- Full text of the message
+        has_media,                                   -- Boolean flag if message contains media
+        image_path,                                  -- Path to downloaded image
+        views::int as views,                         -- Cast views to integer
+        forwards::int as forwards,                   -- Cast forwards to integer
+        length(message_text) as message_length,     -- Derived column: message length
+        case when has_media then 1 else 0 end as has_image  -- Flag for messages with images
+    from raw
+    where message_id is not null                     -- Remove rows with null IDs
+)
+
+select *
+from cleaned
+  );
+[0m12:00:47.227972 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:00:47.252238 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "analytics.telegram_messages" does not exist
+LINE 12:     from "medical_dw"."analytics"."telegram_messages"  -- Re...
+                  ^
+
+[0m12:00:47.252595 [debug] [Thread-1 (]: On model.medical_warehouse.stg_telegram_messages: ROLLBACK
+[0m12:00:47.252986 [debug] [Thread-1 (]: On model.medical_warehouse.stg_telegram_messages: Close
+[0m12:00:47.270475 [debug] [Thread-1 (]: Database Error in model stg_telegram_messages (models\staging\stg_telegram_messages.sql)
+  relation "analytics.telegram_messages" does not exist
+  LINE 12:     from "medical_dw"."analytics"."telegram_messages"  -- Re...
+                    ^
+  compiled code at target\run\medical_warehouse\models\staging\stg_telegram_messages.sql
+[0m12:00:47.272399 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd7ef53c3-2e05-4549-9f1d-79d85708384b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18AAFAFD0>]}
+[0m12:00:47.272920 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model analytics.stg_telegram_messages ........... [[31mERROR[0m in 0.08s]
+[0m12:00:47.273533 [debug] [Thread-1 (]: Finished running node model.medical_warehouse.stg_telegram_messages
+[0m12:00:47.273963 [debug] [Thread-7 (]: Marking all children of 'model.medical_warehouse.stg_telegram_messages' to be skipped because of status 'error'.  Reason: Database Error in model stg_telegram_messages (models\staging\stg_telegram_messages.sql)
+  relation "analytics.telegram_messages" does not exist
+  LINE 12:     from "medical_dw"."analytics"."telegram_messages"  -- Re...
+                    ^
+  compiled code at target\run\medical_warehouse\models\staging\stg_telegram_messages.sql.
+[0m12:00:47.275301 [debug] [MainThread]: On master: COMMIT
+[0m12:00:47.275525 [debug] [MainThread]: Using postgres connection "master"
+[0m12:00:47.275696 [debug] [MainThread]: On master: COMMIT
+[0m12:00:47.275848 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:00:47.299902 [debug] [MainThread]: SQL status: COMMIT in 0.024 seconds
+[0m12:00:47.300239 [debug] [MainThread]: On master: Close
+[0m12:00:47.300600 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:00:47.300826 [debug] [MainThread]: Connection 'create_medical_dw_analytics' was properly closed.
+[0m12:00:47.301028 [debug] [MainThread]: Connection 'list_medical_dw_analytics' was properly closed.
+[0m12:00:47.301176 [debug] [MainThread]: Connection 'model.medical_warehouse.stg_telegram_messages' was properly closed.
+[0m12:00:47.301358 [info ] [MainThread]: 
+[0m12:00:47.301733 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.29 seconds (0.29s).
+[0m12:00:47.302380 [debug] [MainThread]: Command end result
+[0m12:00:47.314297 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\target\manifest.json
+[0m12:00:47.315812 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\target\semantic_manifest.json
+[0m12:00:47.319821 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\target\run_results.json
+[0m12:00:47.320043 [info ] [MainThread]: 
+[0m12:00:47.320512 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m12:00:47.320875 [info ] [MainThread]: 
+[0m12:00:47.321209 [error] [MainThread]: [31mFailure in model stg_telegram_messages (models\staging\stg_telegram_messages.sql)[0m
+[0m12:00:47.321631 [error] [MainThread]:   Database Error in model stg_telegram_messages (models\staging\stg_telegram_messages.sql)
+  relation "analytics.telegram_messages" does not exist
+  LINE 12:     from "medical_dw"."analytics"."telegram_messages"  -- Re...
+                    ^
+  compiled code at target\run\medical_warehouse\models\staging\stg_telegram_messages.sql
+[0m12:00:47.322049 [info ] [MainThread]: 
+[0m12:00:47.322437 [info ] [MainThread]:   compiled code at target\compiled\medical_warehouse\models\staging\stg_telegram_messages.sql
+[0m12:00:47.322785 [info ] [MainThread]: 
+[0m12:00:47.323108 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m12:00:47.323613 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m12:00:47.324540 [debug] [MainThread]: Command `dbt run` failed at 12:00:47.324431 after 1.47 seconds
+[0m12:00:47.324892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18B867230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C184FC2EB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18A3D02F0>]}
+[0m12:00:47.325160 [debug] [MainThread]: Flushing usage events
+[0m12:00:49.353951 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:44:14.135688 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED078DD010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED08C37ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED08C37B10>]}
+
+
+============================== 14:44:14.144614 | 54be7396-b307-4020-854e-6d570c36dafe ==============================
+[0m14:44:14.144614 [info ] [MainThread]: Running with dbt=1.11.2
+[0m14:44:14.145182 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m14:44:14.162257 [info ] [MainThread]: dbt version: 1.11.2
+[0m14:44:14.162617 [info ] [MainThread]: python version: 3.13.9
+[0m14:44:14.162982 [info ] [MainThread]: python path: C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\venv\Scripts\python.exe
+[0m14:44:14.163375 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m14:44:14.200353 [info ] [MainThread]: Using profiles dir at C:\Users\Kifiya_Administrator\.dbt
+[0m14:44:14.200962 [info ] [MainThread]: Using profiles.yml file at C:\Users\Kifiya_Administrator\.dbt\profiles.yml
+[0m14:44:14.201422 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+[0m14:44:14.202380 [info ] [MainThread]: adapter type: postgres
+[0m14:44:14.202817 [info ] [MainThread]: adapter version: 1.10.0
+[0m14:44:14.205421 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m14:44:14.205814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '54be7396-b307-4020-854e-6d570c36dafe', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED08D3A650>]}
+[0m14:44:14.206229 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m14:44:14.206553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '54be7396-b307-4020-854e-6d570c36dafe', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED08CCFCE0>]}
+[0m14:44:14.276335 [info ] [MainThread]: Configuration:
+[0m14:44:14.277074 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:44:14.277449 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:44:14.277830 [info ] [MainThread]: Required dependencies:
+[0m14:44:14.278126 [debug] [MainThread]: Executing "git --help"
+[0m14:44:14.303105 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:44:14.303631 [debug] [MainThread]: STDERR: "b''"
+[0m14:44:14.303922 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:44:14.304286 [info ] [MainThread]: Connection:
+[0m14:44:14.304660 [info ] [MainThread]:   host: localhost
+[0m14:44:14.305007 [info ] [MainThread]:   port: 5432
+[0m14:44:14.305284 [info ] [MainThread]:   user: postgres
+[0m14:44:14.305515 [info ] [MainThread]:   database: medical_dw
+[0m14:44:14.305720 [info ] [MainThread]:   schema: analytics
+[0m14:44:14.305912 [info ] [MainThread]:   connect_timeout: 10
+[0m14:44:14.306099 [info ] [MainThread]:   role: None
+[0m14:44:14.306295 [info ] [MainThread]:   search_path: None
+[0m14:44:14.306547 [info ] [MainThread]:   keepalives_idle: 0
+[0m14:44:14.306790 [info ] [MainThread]:   sslmode: None
+[0m14:44:14.306996 [info ] [MainThread]:   sslcert: None
+[0m14:44:14.307181 [info ] [MainThread]:   sslkey: None
+[0m14:44:14.307359 [info ] [MainThread]:   sslrootcert: None
+[0m14:44:14.307546 [info ] [MainThread]:   application_name: dbt
+[0m14:44:14.307727 [info ] [MainThread]:   retries: 1
+[0m14:44:14.308036 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m14:44:14.542157 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m14:44:15.550242 [debug] [MainThread]: Using postgres connection "debug"
+[0m14:44:15.550534 [debug] [MainThread]: On debug: select 1 as id
+[0m14:44:15.550724 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:44:15.588431 [debug] [MainThread]: SQL status: SELECT 1 in 0.038 seconds
+[0m14:44:15.589144 [debug] [MainThread]: On debug: Close
+[0m14:44:15.589443 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:44:15.589868 [info ] [MainThread]: [32mAll checks passed![0m
+[0m14:44:15.590388 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m14:44:15.591130 [debug] [MainThread]: Command `dbt debug` succeeded at 14:44:15.591011 after 1.57 seconds
+[0m14:44:15.591520 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:44:15.591822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED09DBDB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED09DBDC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED08CDB020>]}
+[0m14:44:15.592171 [debug] [MainThread]: Flushing usage events
+[0m14:44:17.693661 [debug] [MainThread]: An error was encountered while trying to flush usage events
