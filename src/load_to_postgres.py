@@ -20,16 +20,16 @@ conn = psycopg2.connect(
     user=DB_USER,
     password=DB_PASSWORD
 )
-
 cur = conn.cursor()
 
+# Create analytics schema and table
 cur.execute("""
-CREATE SCHEMA IF NOT EXISTS raw;
+CREATE SCHEMA IF NOT EXISTS analytics;
 
-DROP TABLE IF EXISTS raw.telegram_messages;
+DROP TABLE IF EXISTS analytics.telegram_messages;
 
-CREATE TABLE raw.telegram_messages (
-    message_id BIGINT,
+CREATE TABLE analytics.telegram_messages (
+    message_id BIGINT PRIMARY KEY,
     channel_name TEXT,
     message_date TIMESTAMP,
     message_text TEXT,
@@ -39,11 +39,14 @@ CREATE TABLE raw.telegram_messages (
     image_path TEXT
 );
 """)
-
 conn.commit()
 
+# Insert all JSON records
 insert_sql = """
-INSERT INTO raw.telegram_messages VALUES (%s,%s,%s,%s,%s,%s,%s,%s)
+INSERT INTO analytics.telegram_messages 
+(message_id, channel_name, message_date, message_text, views, forwards, has_media, image_path)
+VALUES (%s,%s,%s,%s,%s,%s,%s,%s)
+ON CONFLICT (message_id) DO NOTHING
 """
 
 for root, _, files in os.walk(DATA_DIR):
@@ -69,4 +72,4 @@ conn.commit()
 cur.close()
 conn.close()
 
-print("✅ Raw telegram data loaded into PostgreSQL")
+print("✅ Raw telegram data loaded into PostgreSQL (analytics.telegram_messages)")
