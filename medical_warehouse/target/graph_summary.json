@@ -1,0 +1,1 @@
+{"_invocation_id": "d7ef53c3-2e05-4549-9f1d-79d85708384b", "linked": {"0": {"name": "source.medical_warehouse.raw.telegram_messages", "type": "source", "succ": [1]}, "1": {"name": "model.medical_warehouse.stg_telegram_messages", "type": "model"}}}
