@@ -1,0 +1,34 @@
+[0m10:54:08.471594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028F7250D010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028F73857ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028F73857B10>]}
+
+
+============================== 10:54:08.479985 | f1e86f8e-5c5c-4687-a572-42450e598632 ==============================
+[0m10:54:08.479985 [info ] [MainThread]: Running with dbt=1.11.2
+[0m10:54:08.480548 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init medical_warehouse', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:54:08.491178 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\Kifiya_Administrator\.dbt
+[0m10:54:08.492310 [info ] [MainThread]: A project called medical_warehouse already exists here.
+[0m10:54:08.492907 [debug] [MainThread]: Command `dbt init` succeeded at 10:54:08.492817 after 0.11 seconds
+[0m10:54:08.493135 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028F7385E650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028F73915A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028F736B7350>]}
+[0m10:54:08.493371 [debug] [MainThread]: Flushing usage events
+[0m10:54:10.604979 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:06:19.681721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E50409D010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E5053F7ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E5053F7B10>]}
+
+
+============================== 11:06:19.685902 | bdad19fe-40d8-492c-ad73-c108961fd30e ==============================
+[0m11:06:19.685902 [info ] [MainThread]: Running with dbt=1.11.2
+[0m11:06:19.686557 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init medical_warehouse', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m11:06:19.697756 [info ] [MainThread]: A project called medical_warehouse already exists here.
+[0m11:06:19.698415 [debug] [MainThread]: Command `dbt init` succeeded at 11:06:19.698288 after 0.10 seconds
+[0m11:06:19.698662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E5053FE650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E5054B5A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E505257350>]}
+[0m11:06:19.698934 [debug] [MainThread]: Flushing usage events
+[0m11:06:21.750679 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:33:09.220578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C699E9D010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C69B1F7ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C69B1F7B10>]}
+
+
+============================== 11:33:09.223664 | 5df774c2-fdfc-45c6-8e48-cfbf927980bb ==============================
+[0m11:33:09.223664 [info ] [MainThread]: Running with dbt=1.11.2
+[0m11:33:09.224193 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init medical_warehouse', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m11:33:09.235656 [info ] [MainThread]: A project called medical_warehouse already exists here.
+[0m11:33:09.236324 [debug] [MainThread]: Command `dbt init` succeeded at 11:33:09.236215 after 0.10 seconds
+[0m11:33:09.236608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C69B1FE650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C69B2B1A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C69B057350>]}
+[0m11:33:09.237037 [debug] [MainThread]: Flushing usage events
+[0m11:33:11.326515 [debug] [MainThread]: An error was encountered while trying to flush usage events
