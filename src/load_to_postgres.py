@@ -3,36 +3,47 @@ import json
 import psycopg2
 from dotenv import load_dotenv
 
+# Load environment variables from .env
 load_dotenv()
 
+# Database configuration
 DB_HOST = os.getenv("DB_HOST")
 DB_PORT = os.getenv("DB_PORT")
 DB_NAME = os.getenv("DB_NAME")
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 
-RAW_DIR = "data/raw/telegram_messages"
+# Folder containing your raw JSON data
+DATA_DIR = "data/raw/telegram_messages"
 
-conn = psycopg2.connect(
-    host=DB_HOST,
-    port=DB_PORT,
-    dbname=DB_NAME,
-    user=DB_USER,
-    password=DB_PASSWORD
-)
+# Connect to PostgreSQL
+try:
+    conn = psycopg2.connect(
+        host=DB_HOST,
+        port=DB_PORT,
+        dbname=DB_NAME,
+        user=DB_USER,
+        password=DB_PASSWORD
+    )
+except psycopg2.OperationalError as e:
+    print(f"❌ Could not connect to database: {e}")
+    exit(1)
 
-cursor = conn.cursor()
+cur = conn.cursor()
 
-cursor.execute("""
+# Create schema and table
+cur.execute("""
 CREATE SCHEMA IF NOT EXISTS raw;
 
-CREATE TABLE IF NOT EXISTS raw.telegram_messages (
+DROP TABLE IF EXISTS raw.telegram_messages;
+
+CREATE TABLE raw.telegram_messages (
     message_id BIGINT,
     channel_name TEXT,
     message_date TIMESTAMP,
     message_text TEXT,
-    views INT,
-    forwards INT,
+    views INTEGER,
+    forwards INTEGER,
     has_media BOOLEAN,
     image_path TEXT
 );
@@ -40,32 +51,37 @@ CREATE TABLE IF NOT EXISTS raw.telegram_messages (
 
 conn.commit()
 
-def load_json_files():
-    for root, _, files in os.walk(RAW_DIR):
-        for file in files:
-            if file.endswith(".json"):
-                path = os.path.join(root, file)
-                with open(path, "r", encoding="utf-8") as f:
-                    messages = json.load(f)
+# Insert data into table
+insert_sql = """
+INSERT INTO raw.telegram_messages VALUES (%s,%s,%s,%s,%s,%s,%s,%s)
+"""
 
-                for msg in messages:
-                    cursor.execute("""
-                        INSERT INTO raw.telegram_messages VALUES (%s,%s,%s,%s,%s,%s,%s,%s)
-                    """, (
-                        msg.get("message_id"),
-                        msg.get("channel_name"),
-                        msg.get("message_date"),
-                        msg.get("message_text"),
-                        msg.get("views"),
-                        msg.get("forwards"),
-                        msg.get("has_media"),
-                        msg.get("image_path"),
-                    ))
+for root, _, files in os.walk(DATA_DIR):
+    for file in files:
+        if file.endswith(".json"):
+            full_path = os.path.join(root, file)
+            with open(full_path, "r", encoding="utf-8") as f:
+                try:
+                    records = json.load(f)
+                except json.JSONDecodeError:
+                    print(f"⚠️ Could not decode JSON file: {full_path}")
+                    continue
 
-                conn.commit()
-                print(f"Loaded {file}")
+            for r in records:
+                cur.execute(insert_sql, (
+                    r.get("message_id"),
+                    r.get("channel_name"),
+                    r.get("message_date"),
+                    r.get("message_text"),
+                    r.get("views"),
+                    r.get("forwards"),
+                    r.get("has_media"),
+                    r.get("image_path")
+                ))
 
-if __name__ == "__main__":
-    load_json_files()
-    cursor.close()
-    conn.close()
+# Close connection
+conn.commit()
+cur.close()
+conn.close()
+
+print("✅ Raw telegram data loaded into PostgreSQL")
