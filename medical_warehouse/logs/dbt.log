@@ -545,3 +545,158 @@ parsing.
 [0m14:44:15.591822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED09DBDB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED09DBDC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED08CDB020>]}
 [0m14:44:15.592171 [debug] [MainThread]: Flushing usage events
 [0m14:44:17.693661 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:48:57.848446 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012515B7DA90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001251173B750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012517D5FB10>]}
+
+
+============================== 15:48:57.853832 | bd6a3893-4db1-4bcc-b3a6-fbcc4d953bc4 ==============================
+[0m15:48:57.853832 [info ] [MainThread]: Running with dbt=1.11.2
+[0m15:48:57.854446 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'write_json': 'True', 'log_format': 'default', 'printer_width': '80', 'invocation_command': 'dbt run --select yolo_detections', 'warn_error': 'None', 'log_path': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse\\logs', 'fail_fast': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m15:48:57.909394 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m15:48:57.909970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'bd6a3893-4db1-4bcc-b3a6-fbcc4d953bc4', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012517D95480>]}
+[0m15:48:57.910320 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m15:48:57.910746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'bd6a3893-4db1-4bcc-b3a6-fbcc4d953bc4', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012517D7FCE0>]}
+[0m15:48:58.064935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bd6a3893-4db1-4bcc-b3a6-fbcc4d953bc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012517D48350>]}
+[0m15:48:58.122083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bd6a3893-4db1-4bcc-b3a6-fbcc4d953bc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012516BFFF20>]}
+[0m15:48:58.123013 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m15:48:58.303237 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m15:48:59.215401 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 8 files added, 1 files changed.
+[0m15:48:59.215766 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\fct_image_detections.sql
+[0m15:48:59.215981 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\yolo_detections.sql
+[0m15:48:59.216159 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\fct_messages.sql
+[0m15:48:59.216360 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\schema.yml
+[0m15:48:59.216532 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://tests\assert_no_future_messages.sql
+[0m15:48:59.216695 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\dim_channels.sql
+[0m15:48:59.216866 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\dim_dates.sql
+[0m15:48:59.217030 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://tests\assert_positive_views.sql
+[0m15:48:59.217236 [debug] [MainThread]: Partial parsing: updated file: medical_warehouse://models\staging\stg_telegram_messages.sql
+[0m15:48:59.655364 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.medical_warehouse.yolo_detections' (models\marts\yolo_detections.sql) depends on a node named 'raw_yolo_results' which was not found
+[0m15:48:59.656101 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m15:48:59.656853 [debug] [MainThread]: Command `dbt run` failed at 15:48:59.656761 after 1.92 seconds
+[0m15:48:59.657095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012517EC8AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012517EC9630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125186EDE60>]}
+[0m15:48:59.657325 [debug] [MainThread]: Flushing usage events
+[0m15:49:02.588922 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:49:04.939809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016136ECDA90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016132ABB750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000161390AFB10>]}
+
+
+============================== 15:49:04.943131 | 04734f4a-ffc4-47e9-ab60-47961fb6646b ==============================
+[0m15:49:04.943131 [info ] [MainThread]: Running with dbt=1.11.2
+[0m15:49:04.943649 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'cache_selected_only': 'False', 'no_print': 'None', 'use_colors': 'True', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt test --select yolo_detections', 'printer_width': '80', 'write_json': 'True'}
+[0m15:49:04.990880 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m15:49:04.991429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '04734f4a-ffc4-47e9-ab60-47961fb6646b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000161390E9480>]}
+[0m15:49:04.991795 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m15:49:04.992202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '04734f4a-ffc4-47e9-ab60-47961fb6646b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000161390CFCE0>]}
+[0m15:49:05.122948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '04734f4a-ffc4-47e9-ab60-47961fb6646b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016139088350>]}
+[0m15:49:05.179294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '04734f4a-ffc4-47e9-ab60-47961fb6646b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016137F4FF20>]}
+[0m15:49:05.187750 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m15:49:05.325874 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m15:49:05.395875 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 8 files added, 1 files changed.
+[0m15:49:05.396215 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\fct_image_detections.sql
+[0m15:49:05.396430 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\fct_messages.sql
+[0m15:49:05.396606 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\yolo_detections.sql
+[0m15:49:05.396773 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://tests\assert_no_future_messages.sql
+[0m15:49:05.396983 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\schema.yml
+[0m15:49:05.397172 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://tests\assert_positive_views.sql
+[0m15:49:05.397345 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\dim_dates.sql
+[0m15:49:05.397509 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\dim_channels.sql
+[0m15:49:05.397705 [debug] [MainThread]: Partial parsing: updated file: medical_warehouse://models\staging\stg_telegram_messages.sql
+[0m15:49:05.879956 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.medical_warehouse.yolo_detections' (models\marts\yolo_detections.sql) depends on a node named 'raw_yolo_results' which was not found
+[0m15:49:05.880609 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m15:49:05.881366 [debug] [MainThread]: Command `dbt test` failed at 15:49:05.881276 after 1.04 seconds
+[0m15:49:05.881778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001613907FE70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001613907E350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016139AEDE60>]}
+[0m15:49:05.882171 [debug] [MainThread]: Flushing usage events
+[0m15:49:06.777415 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:00:58.031961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014A4DE61A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014A49A0B750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014A5003BB10>]}
+
+
+============================== 16:00:58.034973 | 51d3ab78-4052-421f-980a-71de227c7954 ==============================
+[0m16:00:58.034973 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:00:58.035517 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'no_print': 'None', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --select raw_yolo_results', 'target_path': 'None', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'log_path': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse\\logs', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse', 'use_colors': 'True', 'printer_width': '80', 'write_json': 'True'}
+[0m16:00:58.036396 [error] [MainThread]: Encountered an error:
+Runtime Error
+  dbt cannot run because no profile was specified for this dbt project.
+  To specify a profile for this project, add a line like the this to
+  your dbt_project.yml file:
+  
+  profile: [profile name]
+  
+  Here, [profile name] should be replaced with a profile name
+  defined in your profiles.yml file. You can find profiles.yml here:
+  
+  C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse/profiles.yml
+  
+[0m16:00:58.037078 [debug] [MainThread]: Command `dbt run` failed at 16:00:58.036993 after 0.10 seconds
+[0m16:00:58.037304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014A50074FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014A500B4710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014A500599D0>]}
+[0m16:00:58.037524 [debug] [MainThread]: Flushing usage events
+[0m16:01:00.958306 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:01:03.304362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF7B1B1A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF76D9B750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF7D38FB10>]}
+
+
+============================== 16:01:03.307529 | 03b76ef0-1fcd-4388-92be-4bf0dd2cb8d9 ==============================
+[0m16:01:03.307529 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:01:03.308519 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'write_json': 'True', 'invocation_command': 'dbt run --select yolo_detections', 'printer_width': '80', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse', 'warn_error': 'None', 'log_path': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse\\logs', 'fail_fast': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m16:01:03.309525 [error] [MainThread]: Encountered an error:
+Runtime Error
+  dbt cannot run because no profile was specified for this dbt project.
+  To specify a profile for this project, add a line like the this to
+  your dbt_project.yml file:
+  
+  profile: [profile name]
+  
+  Here, [profile name] should be replaced with a profile name
+  defined in your profiles.yml file. You can find profiles.yml here:
+  
+  C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse/profiles.yml
+  
+[0m16:01:03.310266 [debug] [MainThread]: Command `dbt run` failed at 16:01:03.310174 after 0.09 seconds
+[0m16:01:03.310506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF7D3C4FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF7D400710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF7D3AD9D0>]}
+[0m16:01:03.310738 [debug] [MainThread]: Flushing usage events
+[0m16:01:04.198862 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:01:06.473479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FAD265DA90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FACE2CB750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FAD483FB10>]}
+
+
+============================== 16:01:06.479220 | 567188c2-84c7-47a9-afcf-67ad32b7714a ==============================
+[0m16:01:06.479220 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:01:06.479794 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse', 'write_json': 'True', 'use_colors': 'True', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\Kifiya_Administrator\\Desktop\\medical-telegram-warehouse\\medical-telegram-warehouse\\medical_warehouse\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt test --select yolo_detections', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m16:01:06.480606 [error] [MainThread]: Encountered an error:
+Runtime Error
+  dbt cannot run because no profile was specified for this dbt project.
+  To specify a profile for this project, add a line like the this to
+  your dbt_project.yml file:
+  
+  profile: [profile name]
+  
+  Here, [profile name] should be replaced with a profile name
+  defined in your profiles.yml file. You can find profiles.yml here:
+  
+  C:\Users\Kifiya_Administrator\Desktop\medical-telegram-warehouse\medical-telegram-warehouse\medical_warehouse/profiles.yml
+  
+[0m16:01:06.481273 [debug] [MainThread]: Command `dbt test` failed at 16:01:06.481191 after 0.09 seconds
+[0m16:01:06.481498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FAD4874FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FAD48B0710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FAD48599D0>]}
+[0m16:01:06.481724 [debug] [MainThread]: Flushing usage events
+[0m16:01:07.329953 [debug] [MainThread]: An error was encountered while trying to flush usage events
