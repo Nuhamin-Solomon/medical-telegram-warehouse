@@ -2,15 +2,8 @@ name: 'medical_warehouse'
 version: '1.0'
 config-version: 2
 
-profile: 'medical_warehouse'
-
-source-paths: ["models"]
-analysis-paths: ["analysis"]
-test-paths: ["tests"]
-data-paths: ["data"]
-macro-paths: ["macros"]
+model-paths: ["models/staging", "models/marts"]
 
 target-path: "target"
 clean-targets:
   - "target"
-  - "dbt_modules"

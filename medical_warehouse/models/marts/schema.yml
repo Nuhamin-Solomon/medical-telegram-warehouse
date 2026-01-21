@@ -1,33 +1,15 @@
 version: 2
 
 models:
-  - name: dim_channels
-    columns:
-      - name: channel_key
-        tests:
-          - unique
-          - not_null
-
-  - name: dim_dates
-    columns:
-      - name: date_key
-        tests:
-          - unique
-          - not_null
-
-  - name: fct_messages
+  - name: yolo_detections
+    description: "Processed YOLO detection results with product categories"
     columns:
       - name: message_id
         tests:
-          - unique
           - not_null
-      - name: channel_key
+      - name: product_name
         tests:
-          - relationships:
-              to: ref('dim_channels')
-              field: channel_key
-      - name: date_key
+          - not_null
+      - name: product_category
         tests:
-          - relationships:
-              to: ref('dim_dates')
-              field: date_key
+          - not_null
